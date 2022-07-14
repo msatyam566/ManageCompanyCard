@@ -1,7 +1,7 @@
 # ManageCompanyCard
 
 
-Approch- in this assignement i have made a post request to create card and get request to see the details i can do some authentication also but from company there are no mention so i did not do this thing
+Approch- in this assignement we have given to do backend part and i have made a post request to create card and get request to see the details i can do some authentication also but from company there are no mention so i did not do this thing. i have handled edge cases for validations and dublication also there are i make it short and clear
 
 Assignment #:We would like them to create a small backend application or function which takes the following as inputs:
 Name of the Person 
