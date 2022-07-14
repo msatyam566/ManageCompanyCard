@@ -49,11 +49,15 @@ const createCompanyCard = async(req,res)=>{
         if (!validation.isValidValue(emailId)) {
             return res.status(400).send({ status: false, messege: "please provide emailId" })
         }
+        if (!/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(emailId)) {
+            return res.status(400).send({ status: false, message: "Please provide valid Email Address" });
+        }
     
         let isDuplicateEmail = await companyModel.findOne({ emailId })
         if (isDuplicateEmail) {
             return res.status(400).send({ status: false, message: "This email already exists" })
         }
+
 
         //===========================validations check for website url===============================================//
 

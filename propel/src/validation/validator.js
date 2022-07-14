@@ -21,11 +21,7 @@ const isValidUrl =function(url){
     
     
 }
-// const isValidEmail = function(emailId){
-//     emailId = emailId.trim()
-//     let regexForEmail = !/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
-//     return regexForEmail.test(emailId)
-// }
+
 
 const isValidObjectId = (objectId) => mongoose.Types.ObjectId.isValid(objectId)
 
