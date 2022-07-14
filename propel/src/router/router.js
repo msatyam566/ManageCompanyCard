@@ -6,6 +6,6 @@ const companyController = require("../controller/companyController")
 //=========API============//
 
 router.post('/business-card',companyController.createCompanyCard)
-router.get('/business-card/:id',companyController.getCompanyCardDetails)
+router.get('/business-card/:cardId',companyController.getCompanyCardDetails)
 
 module.exports = router;

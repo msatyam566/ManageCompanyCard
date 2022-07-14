@@ -96,15 +96,15 @@ const createCompanyCard = async(req,res)=>{
 
 const getCompanyCardDetails = async (req,res)=>{
 try {
-    const cardIdInParams = req.params.cardId
+    const cardId = req.params.cardId
 
     //==================checking buisness cardId is valid or not======================//
 
-    if (!validation.isValidObjectId(cardIdInParams)) {
+    if (!validation.isValidObjectId(cardId)) {
         return res.status(400).send({ status: false, message: "cardId is invalid" });
     }
 
-    const cardById = await companyModel.findById(cardIdInParams);
+    const cardById = await companyModel.findById(cardId);
 
         if (!cardById) {
             return res.status(404).send({ status: false, message: 'No Card found with this Id ' });
